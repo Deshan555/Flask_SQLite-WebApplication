@@ -1,3 +1,4 @@
+# import all related python modeules
 import sqlite3
 
 import random
