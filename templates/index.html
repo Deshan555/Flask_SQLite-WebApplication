@@ -12,7 +12,27 @@
 
 <body>
 
-    <form accept="/add_items" method="POST">
+    <!-- REMOVE ITEMS FROM THE FORM -->
+    <div id="remove_items">
+        
+        <form action="/remove_items" method="post">
+        
+            {% for item in shopping_list %}
+        
+            <input type="checkbox" name="check" id="{{ item }}" value="{{ item }}">
+        
+            <label for="{{ item }}" name="{{ item }}">{{ item }}</label><br>
+        
+            {% endfor %}
+
+            <input type="submit" value="REMOVE ITEMS">
+        
+        </form>
+
+    </div>
+
+    <!-- ADD ITEMS TO THE FORM -->
+    <form action="/add_items" method="POST">
         
         <select name="select_items">
             
