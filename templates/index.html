@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Grocery List</title>
+
+</head>
+
+<body>
+
+    <form accept="/add_items" method="POST">
+        
+        <select name="select_items">
+            
+            {% for item in execute_data %}
+            
+            <option value="{{ item }}">{{ item }}</option>
+            
+            {% endfor %}
+        
+        </select>
+
+        <input type="submit" value="ADD ITEM">
+    </form>
+
+</body>
+
+</html>
